@@ -31,6 +31,8 @@ export const ChatWrapper = styled.div`
   height: 100%;
   width: 100%;
 
+  overflow: auto;
+
   position: absolute;
   top: 0;
 
@@ -47,6 +49,23 @@ export const ChatWrapper = styled.div`
     top: 30px;
 
     border: 2px solid #DBD4CA;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 
   header {
@@ -96,4 +115,7 @@ export const ChatWrapper = styled.div`
 
 export const Chat = styled.div`
   padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `

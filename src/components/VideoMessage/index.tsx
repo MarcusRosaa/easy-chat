@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Container } from './styles';
 
 
 const VideoMessage: React.FC = () => {
@@ -17,7 +18,8 @@ const VideoMessage: React.FC = () => {
   }, []);
 
   return (
-    <div ref={videoContainerRef} id="vid_6467d0a665ce7000094b0c80" style={{ position: 'relative', width: '100%', padding: '56.25% 0 0' }}>
+    <Container>
+      <div ref={videoContainerRef} id="vid_6467d0a665ce7000094b0c80" style={{ position: 'relative', width: '100%', padding: '56.25% 0 0', maxHeight: '300px' }}>
       <img
         id="thumb_6467d0a665ce7000094b0c80"
         src="https://images.converteai.net/4890008e-a86d-404c-acf2-8732008dd7ea/players/6467d0a665ce7000094b0c80/thumbnail.jpg"
@@ -41,6 +43,7 @@ const VideoMessage: React.FC = () => {
         backdropFilter: 'blur(5px)'
       }}></div>
     </div>
+    </Container>
   )
 }
 

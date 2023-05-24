@@ -1,6 +1,6 @@
 import { BotMessageBoxContainer, ChatBubble, ChatPointer, MessageText, ProfilePic } from './styles';
 import profPic from "../../assets/images/perfil.jpg";
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 // import VideoMessage from '../../messages/';
 
 interface IProps {
@@ -13,6 +13,8 @@ const BotMessageBox: React.FC<IProps> = ({ message }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    const delay = message.length * .2;
+
     const timer = setInterval(() => {
       if (currentIndex < message.length) {
         setTypedMessage((prevTypedText) => prevTypedText + message[currentIndex]);
@@ -20,13 +22,12 @@ const BotMessageBox: React.FC<IProps> = ({ message }) => {
       } else {
         clearInterval(timer);
       }
-    }, 50);
+    }, delay);
 
     return () => {
       clearInterval(timer);
     };
   }, [currentIndex, message]);
-
 
   return (
     <BotMessageBoxContainer>
