@@ -1,5 +1,7 @@
 import React from 'react'
 import { Chat, ChatWrapper, Container, Main, Top } from './styles';
+import profilePic from "../../assets/images/perfil.jpg";
+import verifyIcon from "../../assets/images/verificado.png";
 
 const Home: React.FC = () => {
   return (
@@ -8,12 +10,14 @@ const Home: React.FC = () => {
       <Main>
         <ChatWrapper>
           <header>
-            {/* <img src=''/> */}
-            header
+            <img className= 'profile' src={profilePic} alt="foto"/>
+            <div>
+              <p className='name'>Luiz | Detetive Digital <img src={verifyIcon} alt="verificado" /></p>
+              <p className='staus'>online</p>
+            </div>
           </header>
 
           <Chat>
-            chat
           </Chat>
         </ChatWrapper>
       </Main>
