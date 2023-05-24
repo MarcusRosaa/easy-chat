@@ -19,6 +19,12 @@ export const Main = styled.div`
   width: 100%;
   height: calc(100% - 100px);
   background-color: #E5DDD5;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const ChatWrapper = styled.div`
@@ -34,6 +40,14 @@ export const ChatWrapper = styled.div`
   background-size: 100%;
   background-position: center;
   background-repeat: repeat;
+
+  @media (min-width: 768px) {
+    max-width: 800px;
+    height: 85vh;
+    top: 30px;
+
+    border: 2px solid #DBD4CA;
+  }
 
   header {
     width: 100%;
