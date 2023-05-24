@@ -95,5 +95,5 @@ export const ChatWrapper = styled.div`
 `
 
 export const Chat = styled.div`
-
+  padding: 40px 16px;
 `
