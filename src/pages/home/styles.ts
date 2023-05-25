@@ -43,7 +43,7 @@ export const ChatWrapper = styled.div`
 
   @media (min-width: 768px) {
     max-width: 980px;
-    height: 85vh;
+    height: 93vh;
     top: 30px;
 
     border: 2px solid #DBD4CA;
@@ -98,7 +98,7 @@ export const Chat = styled.div`
   padding: 40px 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   height: calc(100% - 80px);
   overflow: auto;
 
