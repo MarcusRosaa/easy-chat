@@ -1,0 +1,46 @@
+[debug] [2023-05-25T06:21:27.843Z] ----------------------------------------------------------------------
+[debug] [2023-05-25T06:21:27.845Z] Command:       /home/marcus/.nvm/versions/node/v16.16.0/bin/node /home/marcus/.nvm/versions/node/v16.16.0/bin/firebase deploy
+[debug] [2023-05-25T06:21:27.845Z] CLI Version:   12.0.0
+[debug] [2023-05-25T06:21:27.846Z] Platform:      linux
+[debug] [2023-05-25T06:21:27.846Z] Node Version:  v16.16.0
+[debug] [2023-05-25T06:21:27.846Z] Time:          Thu May 25 2023 03:21:27 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2023-05-25T06:21:27.846Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-25T06:21:27.928Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-25T06:21:27.929Z] > authorizing via signed-in user (bussinesschat3@gmail.com)
+[debug] [2023-05-25T06:21:27.929Z] [iam] checking project chat-146e8 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-25T06:21:27.931Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-146e8:testIamPermissions [none]
+[debug] [2023-05-25T06:21:27.931Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-146e8:testIamPermissions x-goog-quota-user=projects/chat-146e8
+[debug] [2023-05-25T06:21:27.931Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-146e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-25T06:21:28.917Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-146e8:testIamPermissions 200
+[debug] [2023-05-25T06:21:28.918Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-146e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-25T06:21:28.923Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-146e8 [none]
+[debug] [2023-05-25T06:21:29.470Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-146e8 200
+[debug] [2023-05-25T06:21:29.471Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-146e8 {"projectId":"chat-146e8","projectNumber":"863370170586","displayName":"chat","name":"projects/chat-146e8","resources":{"hostingSite":"chat-146e8"},"state":"ACTIVE","etag":"1_5a1fb4d4-1db6-40c4-b82a-0571bbaa9dba"}
+[info] 
+[info] === Deploying to 'chat-146e8'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-25T06:21:29.493Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-146e8/versions [none]
+[debug] [2023-05-25T06:21:29.494Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-146e8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-25T06:21:30.877Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-146e8/versions 200
+[debug] [2023-05-25T06:21:30.878Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-146e8/versions {"name":"projects/863370170586/sites/chat-146e8/versions/f514a29d4bed87f0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[chat-146e8]: beginning deploy... 
+[info] i  hosting[chat-146e8]: found 8 files in build 
+[debug] [2023-05-25T06:21:30.913Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-25T06:21:31.164Z] [hosting] hash cache [YnVpbGQ] stored for 8 files
+[debug] [2023-05-25T06:21:31.164Z] [hosting][hash queue][FINAL] {"max":225,"min":58,"avg":97.875,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":239}
+[debug] [2023-05-25T06:21:31.164Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/863370170586/sites/chat-146e8/versions/f514a29d4bed87f0:populateFiles [none]
+[debug] [2023-05-25T06:21:31.164Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/863370170586/sites/chat-146e8/versions/f514a29d4bed87f0:populateFiles {"files":{"/asset-manifest.json":"f4c80ad179a547cdc7d0fe3ee63f07337475656d95813ef3f5883de6fa2d3a77","/index.html":"20069d22c60ac31502fc22f35ac88be97d68538eae04377015caa2fcafe3094b","/static/js/main.5c74c14d.js.LICENSE.txt":"8ba48fdcce74a411f2284169a407da1fe8955bbeca5f59e9f9182b897f704a7c","/favicon.ico":"7e2d856d8daed4d76c6bf7658275e42303e5a3680f86fd3e3d72ec35cd88f445","/static/js/main.5c74c14d.js":"0dba3d32da571823e2869fe6964476d88e2e960d1d262a9730d57b93ab1769ee","/static/media/bg-chat.cebb16c55110c057dff7.png":"a5ad6b6c547adbad97a237beff8ead2cfbd29e7d19970eed2391f56864e5540f","/static/media/perfil.22480ca4f356bc7da900.jpg":"7abb5e25a1fe879a387f5858753b7a22e67b4e371a73b77d4d9dae2451cd0655","/static/js/main.5c74c14d.js.map":"697969868968f61c8f43f4dea56a504c921e98e407a319a016702a85270e70f0"}}
+[debug] [2023-05-25T06:21:32.225Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/863370170586/sites/chat-146e8/versions/f514a29d4bed87f0:populateFiles 200
+[debug] [2023-05-25T06:21:32.226Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/863370170586/sites/chat-146e8/versions/f514a29d4bed87f0:populateFiles {"uploadRequiredHashes":["697969868968f61c8f43f4dea56a504c921e98e407a319a016702a85270e70f0","f4c80ad179a547cdc7d0fe3ee63f07337475656d95813ef3f5883de6fa2d3a77","20069d22c60ac31502fc22f35ac88be97d68538eae04377015caa2fcafe3094b","0dba3d32da571823e2869fe6964476d88e2e960d1d262a9730d57b93ab1769ee"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files"}
+[debug] [2023-05-25T06:21:32.231Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/697969868968f61c8f43f4dea56a504c921e98e407a319a016702a85270e70f0 [none]
+[debug] [2023-05-25T06:21:32.232Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/697969868968f61c8f43f4dea56a504c921e98e407a319a016702a85270e70f0 [stream]
+[debug] [2023-05-25T06:21:32.239Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/f4c80ad179a547cdc7d0fe3ee63f07337475656d95813ef3f5883de6fa2d3a77 [none]
+[debug] [2023-05-25T06:21:32.240Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/f4c80ad179a547cdc7d0fe3ee63f07337475656d95813ef3f5883de6fa2d3a77 [stream]
+[debug] [2023-05-25T06:21:32.245Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/20069d22c60ac31502fc22f35ac88be97d68538eae04377015caa2fcafe3094b [none]
+[debug] [2023-05-25T06:21:32.246Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/20069d22c60ac31502fc22f35ac88be97d68538eae04377015caa2fcafe3094b [stream]
+[debug] [2023-05-25T06:21:32.250Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/0dba3d32da571823e2869fe6964476d88e2e960d1d262a9730d57b93ab1769ee [none]
+[debug] [2023-05-25T06:21:32.251Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-146e8/versions/f514a29d4bed87f0/files/0dba3d32da571823e2869fe6964476d88e2e960d1d262a9730d57b93ab1769ee [stream]
+[debug] [2023-05-25T06:21:32.254Z] [hosting][populate queue][FINAL] {"max":1068,"min":1068,"avg":1068,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1091}
+[debug] [2023-05-25T06:21:32.255Z] [hosting] uploads queued: 4
