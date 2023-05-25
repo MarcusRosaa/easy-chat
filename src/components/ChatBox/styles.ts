@@ -17,9 +17,13 @@ export const ChatBubble = styled.div`
   border-radius: 6px;
   position: relative;
   margin-left: 10px;
-  width: 100%;
   width: fit-content;
-  max-width: 400px;
+  max-width: 800px;
+
+  &.videoChatBubble {
+    width: 100%;
+    max-width: 400px;
+  }
 `;
 
 export const ChatPointer = styled.div`
