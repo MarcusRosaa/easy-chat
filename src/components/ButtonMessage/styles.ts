@@ -7,8 +7,8 @@ export const Container = styled.div`
   justify-content: center;
 
   a {
-    background-color: red;
-    padding: 8px;
+    background-color: #53B164;
+    padding: 12px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
