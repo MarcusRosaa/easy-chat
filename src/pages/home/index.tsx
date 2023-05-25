@@ -27,11 +27,11 @@ const Home: React.FC = () => {
       }
 
       if (renderIndex === 5 || renderIndex === 6) {
-        delay = 1;
+        delay = 60000;
       }
 
       if (renderIndex === 7 || renderIndex === 8 || renderIndex === 9) {
-        delay = 1;
+        delay = 65000;
       }
 
       const timer = setInterval(() => {
