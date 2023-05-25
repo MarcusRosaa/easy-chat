@@ -26,7 +26,7 @@ const InputMessage: React.FC<IProps> = ({ onButtonClick }) => {
 
   return (
     <Container>
-      <input type="text"  placeholder='EX: DDD + Número' value={number} onChange={handleInputChange} maxLength={16}/>
+      <input type="text"  placeholder='EX: DDD + Número' value={number} onChange={handleInputChange} maxLength={15}/>
       <button onClick={handleClick} type='button' disabled={buttonDisabled}>Enviar</button>
     </Container>
   )

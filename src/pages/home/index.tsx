@@ -12,15 +12,13 @@ const Home: React.FC = () => {
   const [stopRender, setStopRender] = useState(false);
 
   const handleClick = useCallback(() => {
-    console.log(stopRender)
     setStopRender(false);
     setRenderIndex(3);
-  }, [stopRender]);
+  }, []);
 
 
   useEffect(() => {
     let delay = 1500;
-    console.log(stopRender)
 
     if (renderIndex < messagesData.length - 1 && (stopRender === false && renderIndex !== 2)) {
 
