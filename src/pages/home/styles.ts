@@ -101,6 +101,14 @@ export const Chat = styled.div`
   gap: 10px;
   height: calc(100% - 80px);
   overflow: auto;
+  scroll-behavior: smooth;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: auto;
+  }
 
   &::-webkit-scrollbar {
     width: 6px;
