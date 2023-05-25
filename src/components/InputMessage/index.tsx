@@ -7,14 +7,10 @@ interface IProps {
 
 const InputMessage: React.FC<IProps> = ({ onButtonClick }) => {
 
-  const handleClick = () => {
-    console.log('continuar')
-  }
-
   return (
     <Container>
       <input type="text"  placeholder='EX: DDD + Número'/>
-      <button onClick={handleClick} type='button'>Enviar</button>
+      <button onClick={onButtonClick} type='button'>Enviar</button>
     </Container>
   )
 }

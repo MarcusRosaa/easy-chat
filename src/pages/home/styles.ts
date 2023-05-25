@@ -31,8 +31,6 @@ export const ChatWrapper = styled.div`
   height: 100%;
   width: 100%;
 
-  overflow: auto;
-
   position: absolute;
   top: 0;
 
@@ -44,28 +42,11 @@ export const ChatWrapper = styled.div`
   background-repeat: repeat;
 
   @media (min-width: 768px) {
-    max-width: 800px;
+    max-width: 980px;
     height: 85vh;
     top: 30px;
 
     border: 2px solid #DBD4CA;
-  }
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
 
   header {
@@ -118,4 +99,30 @@ export const Chat = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: calc(100% - 80px);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    @media (min-width: 768px) {
+      width: 10px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+
+    @media (min-width: 768px) {
+      border-radius: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `
