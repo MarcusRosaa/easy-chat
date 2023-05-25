@@ -24,7 +24,7 @@ export const messagesData = [
   },
   {
     component: null,
-    message: 'Enquanto isso, assista a esse pequeno corte de 2 minutos do meu podcast, onde explico como funciona o nosso sistema…',
+    message: 'Enquanto isso, assista a esse pequeno corte de poucos minutos do meu podcast, onde explico como funciona o nosso sistema…',
     id: 5
   },
   {

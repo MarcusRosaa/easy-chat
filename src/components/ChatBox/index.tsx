@@ -13,7 +13,7 @@ const BotMessageBox: React.FC<IProps> = ({ message }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const delay = message.length * .2;
+    const delay = message.length * .15;
 
     const timer = setInterval(() => {
       if (currentIndex < message.length) {

@@ -5,6 +5,7 @@ import verifyIcon from '../../assets/images/verificado.png';
 import BotMessageBox from '../../components/ChatBox';
 import InputMessage from '../../components/InputMessage';
 import { messagesData } from '../../mock/messages/messages';
+import ButtonMessage from '../../components/ButtonMessage';
 
 const Home: React.FC = () => {
   const [renderIndex, setRenderIndex] = useState(0);
@@ -16,12 +17,28 @@ const Home: React.FC = () => {
     setRenderIndex(3);
   }, [stopRender]);
 
+
   useEffect(() => {
+    let delay = 1500;
     console.log(stopRender)
+
     if (renderIndex < messagesData.length - 1 && (stopRender === false && renderIndex !== 2)) {
+
+      if (renderIndex === 4) {
+        delay = 3000;
+      }
+
+      if (renderIndex === 5 || renderIndex === 6) {
+        delay = 60000;
+      }
+
+      if (renderIndex === 7 || renderIndex === 8 || renderIndex === 9) {
+        delay = 50000;
+      }
+
       const timer = setInterval(() => {
         setRenderIndex((prevIndex) => prevIndex + 1);
-      }, 1500); // Adjust the delay time here (in milliseconds)
+      }, delay); // Adjust the delay time here (in milliseconds)
 
       return () => {
         clearInterval(timer);
@@ -72,14 +89,18 @@ const Home: React.FC = () => {
                     {message.component}
                   </React.Fragment>
                 );
-              } else if (message.id !== null) {
+              } else if (message.id !== null && message.id < 10) {
                 return (
                   <React.Fragment key={message.id}>
                     <BotMessageBox key={message.id} message={message.message} />
                   </React.Fragment>
                 );
+              } else if (message.id !== null && message.id >= 10) {
+                <React.Fragment key={message.id}>
+                  <BotMessageBox key={message.id} message={message.message} />
+                </React.Fragment>
               }
-              return null;
+              return <ButtonMessage key={Math.random()} />;
             })}
           </Chat>
         </ChatWrapper>

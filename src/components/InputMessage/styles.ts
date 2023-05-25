@@ -31,5 +31,9 @@ export const Container = styled.div`
     letter-spacing: 1px;
     font-family: arial;
     cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 `;

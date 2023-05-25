@@ -8,6 +8,16 @@ interface IProps {
 
 const InputMessage: React.FC<IProps> = ({ onButtonClick }) => {
   const [number, setNumber] = useState('')
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+
+  const handleClick = () => {
+    if(number.length > 13) {
+      onButtonClick();
+      setButtonDisabled(true);
+    } else {
+      alert('Número do telefone é obrigátorio');
+    }
+  }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNumber(formatPhone(event.target.value));
@@ -17,7 +27,7 @@ const InputMessage: React.FC<IProps> = ({ onButtonClick }) => {
   return (
     <Container>
       <input type="text"  placeholder='EX: DDD + Número' value={number} onChange={handleInputChange} maxLength={16}/>
-      <button onClick={onButtonClick} type='button'>Enviar</button>
+      <button onClick={handleClick} type='button' disabled={buttonDisabled}>Enviar</button>
     </Container>
   )
 }
