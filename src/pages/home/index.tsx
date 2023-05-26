@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       }
 
       if (renderIndex === 7 || renderIndex === 8 || renderIndex === 9) {
-        delay = 82000;
+        delay = 85000;
       }
 
       const timer = setInterval(() => {
