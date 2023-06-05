@@ -24,7 +24,7 @@ const ButtonMessage: React.FC = () => {
   console.log(link)
   return (
     <Container>
-      <a href={link}>Ver mensagens suspeitas agora</a>
+      <a href={link}>Somente hoje por apenas 56,90/</a>
     </Container>
   );
 };
